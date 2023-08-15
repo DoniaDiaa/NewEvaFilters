@@ -1,0 +1,10 @@
+{
+  "routes": [
+    {
+      "route": "/assets/models/",
+      "serve": "/assets/models"     },
+    {
+      "route": "/*",
+      "rewrite": "/index.html"     }
+  ]
+}
