@@ -1,0 +1,66 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma-rtl.css.map";
+@import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma-rtl.css";
+@import "https://use.fontawesome.com/releases/v5.3.1/js/all.js";
+@import "https://use.fontawesome.com/releases/v5.3.1/js/all.js";
+
+.container {
+    width: 70%;
+    margin: 3rem auto;
+  }
+.content{
+  background-image: url("/assets/splash_video_bg-00be8e2f723b2461f1c2a6a85a5f15a0.png");
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 999px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .column-4{
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+  .container input {
+    width: 100%;
+    margin-bottom: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    padding: 2rem 4rem;
+    border-bottom: 3px solid transparent;
+  }
+  .container input:focus {
+    outline: none;
+  }
+  /* .container input:valid {
+    border-bottom: 3px solid green;
+  } */
+
+  /* .container input:invalid {
+    border-bottom: 3px solid red;
+  } */
+  .container form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container form button {
+    padding: 1.5rem 3rem;
+    border: none;
+  }
+
+  .error {
+    color: red;
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+  }

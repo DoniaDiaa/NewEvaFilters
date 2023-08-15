@@ -1,0 +1,156 @@
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 30px;
+
+
+
+
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+
+}
+
+@media only screen and (max-width: 50em) {
+  .line {
+   width: 100%;
+  }
+
+}
+.ss{
+  display: none;
+}
+
+.filters-container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.filter{
+  width: 25%;
+}
+.filters-container .filter  app-filter{
+position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.filters-container div img{
+  width: 100%;
+}
+canvas img{
+  image-rendering: optimizeQuality;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+.custom-file-upload {
+  /* border: 3px solid var(--color-primary); */
+  padding: 160px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary-light);
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.custom-file-upload i{
+  font-size: 100px;
+  display: block;
+  color: var(--color-primary-dark);
+}
+.custom-file-upload h2{
+  color: var(--color-primary-dark);
+}
+input[type="file"] {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.ss{
+  display: none;
+}
+
+.video-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.check-camera{
+  text-align: center;
+
+}
+.display{
+  opacity: 0;
+}
+.canvas-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#myCanvas{
+  max-width: 100%;
+  height: auto;
+}
+.download{
+  margin-top: 50px;
+
+}
+.modal-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modal-content{
+  position: fixed;
+  bottom: 10rem;
+  z-index: 100;
+
+}
+
+button is-link{
+  margin-left:  575px; ;
+}
+.dig{
+  padding: 1rem 2rem;
+    display: flex;
+    margin: auto auto 25px;
+    position: relative;
+    flex-direction: row;
+  justify-content: center;
+}
+

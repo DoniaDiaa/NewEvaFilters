@@ -1,0 +1,68 @@
+[debug] [2023-08-15T11:16:18.228Z] ----------------------------------------------------------------------
+[debug] [2023-08-15T11:16:18.230Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\donia.diaaeldin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-15T11:16:18.231Z] CLI Version:   12.4.7
+[debug] [2023-08-15T11:16:18.231Z] Platform:      win32
+[debug] [2023-08-15T11:16:18.231Z] Node Version:  v16.17.1
+[debug] [2023-08-15T11:16:18.232Z] Time:          Tue Aug 15 2023 13:16:18 GMT+0200 (Eastern European Standard Time)
+[debug] [2023-08-15T11:16:18.232Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-15T11:16:18.304Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-15T11:16:18.305Z] > authorizing via signed-in user (doniadiaayounan@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\EvaPharmaFiltersTool
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-08-15T11:17:38.562Z] Using project from CLI flag: eva-filter
+[debug] [2023-08-15T11:17:38.565Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/eva-filter [none]
+[debug] [2023-08-15T11:17:39.057Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/eva-filter 403
+[debug] [2023-08-15T11:17:39.058Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/eva-filter {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-08-15T11:17:39.059Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-08-15T11:17:39.246Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\donia.diaaeldin\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\donia.diaaeldin\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project eva-filter. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-08-15T11:18:36.747Z] ----------------------------------------------------------------------
+[debug] [2023-08-15T11:18:36.749Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\donia.diaaeldin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-15T11:18:36.750Z] CLI Version:   12.4.7
+[debug] [2023-08-15T11:18:36.750Z] Platform:      win32
+[debug] [2023-08-15T11:18:36.750Z] Node Version:  v16.17.1
+[debug] [2023-08-15T11:18:36.751Z] Time:          Tue Aug 15 2023 13:18:36 GMT+0200 (Eastern European Standard Time)
+[debug] [2023-08-15T11:18:36.751Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-15T11:18:36.822Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-15T11:18:36.822Z] > authorizing via signed-in user (doniadiaayounan@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\EvaPharmaFiltersTool
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

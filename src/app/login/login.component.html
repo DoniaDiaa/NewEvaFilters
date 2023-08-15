@@ -1,0 +1,144 @@
+
+
+<!-- <div class="container"> -->
+    <!-- We should link our variable to HTML -->
+    <!-- We should Tell our form what to do on submit?? -->
+    <!-- <form [formGroup]="loginform" (ngSubmit)="onlogin()">
+      <input
+        type="email"
+        placeholder="Please enter your email"
+        formControlName="email"
+      />
+      <span
+        *ngIf="
+          loginform.controls['email'].hasError('required') &&
+          loginform.controls['email'].touched
+        "
+        class="error"
+        >Email is required</span
+      >
+
+      <span
+        *ngIf="
+          loginform.controls['email'].hasError('email') &&
+          loginform.controls['email'].touched
+        "
+        class="error"
+        >Invalid Email</span
+      >
+      <input
+        type="password"
+        placeholder="Please enter your password"
+        formControlName="password"
+      />
+
+      <span
+        *ngIf="
+          loginform.controls['password'].hasError('required') &&
+          loginform.controls['password'].touched
+        "
+        class="error"
+        >Password is required</span
+      >
+
+      <span
+        *ngIf="
+          loginform.controls['password'].hasError('minlength') &&
+          loginform.controls['password'].touched
+        "
+        class="error"
+      >
+        Password should be at least 8 characters
+      </span>
+
+      <p style="margin-bottom: 2rem; text-align: center; font-size: 1.5rem">
+        You don't have an account?
+        <span
+          routerLink="/signup"
+          style="color: var(--color-primary); cursor: pointer"
+          >Signup</span
+        >
+      </p>
+      <button  class="btn" type="submit">
+        Login
+      </button>
+    </form>
+  </div> -->
+<section class="hero is-link is-bold is-fullheight">
+  <div class="hero-body">
+
+
+<div class="content">
+  <div class="columns is-centered">
+    <div class ="column-4">
+      <!-- <img src="/assets/splash_video_bg-00be8e2f723b2461f1c2a6a85a5f15a0.png" class="imgbackground"> -->
+      <form [formGroup]="loginform" (ngSubmit)="onlogin()"class="box">
+        <div class="field">
+
+          <label class="label"> Email</label>
+          <div class="control has-icons-left">
+            <input type="email" class="input" placeholder="Enter your email" formControlName="email">
+            <span
+            *ngIf="
+              loginform.controls['email'].hasError('required') &&
+              loginform.controls['email'].touched
+            "
+            class="error"
+            >Email is required</span
+          >
+
+          <span
+            *ngIf="
+              loginform.controls['email'].hasError('email') &&
+              loginform.controls['email'].touched
+            "
+            class="error"
+            >Invalid Email</span
+          >
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label"> Password</label>
+          <div class="control has-icons-left">
+            <input type="password" class="input" placeholder="Enter your password" formControlName="password">
+            <span
+             *ngIf="
+               loginform.controls['password'].hasError('required') &&
+               loginform.controls['password'].touched
+                "
+        class="error"
+        >Password is required</span
+      >
+
+      <span
+        *ngIf="
+          loginform.controls['password'].hasError('minlength') &&
+          loginform.controls['password'].touched
+        "
+        class="error"
+      >
+        Password should be at least 8 characters
+      </span>
+
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">
+            <input type="checkbox" class="checkbox">
+            Remember me
+          </label>
+         </div>
+        <div class="field">
+          <button class="button is-link">LOGIN</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

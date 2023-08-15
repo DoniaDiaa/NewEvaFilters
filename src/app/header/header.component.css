@@ -1,0 +1,88 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+#header{
+    background: #fff;
+    transition: all 0.5s ;
+    z-index: 997px;
+
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+}
+#header .header-scrolled{
+    top: 0;
+}
+#header .logo{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-family: Nunito,sans-serif;
+}
+#header .logo a{
+    color: var(--color-primary);
+}
+#header .logo img{
+    max-height: 40px;
+}
+.logoimg{
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+.navbar-brand{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/*navbar*/
+#navbar{
+    padding: 0;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+.nav-link{
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-size: 2rem;
+}
+.nav-link:hover{
+    color: var(--color-primary-dark);
+    border-bottom: 2px solid var(--color-primary-dark);
+    cursor: pointer;
+}
+
+/* .navbar-toggler{
+    outline: none;
+    border: none !important;
+} */
+.login-btn{
+    margin-left: 5px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 20px;
+
+
+}
+.buttons{
+  display: flex;
+  float: right;
+  justify-content:right;
+  align-items: right;
+}
+.login-btn:hover{
+    background: var(--color-primary-dark);
+    cursor: pointer;
+    color: #fff;
+}

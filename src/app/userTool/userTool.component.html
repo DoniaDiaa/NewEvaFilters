@@ -1,0 +1,151 @@
+<div class="split">
+  <div class="centered">
+    <label for="fileUploader" class="custom-file-upload">
+      <span ><i class="bi bi-cloud-arrow-up-fill"></i></span>
+         <h2>Click to upload your image</h2>
+         <h2>Your image : {{imgname}}</h2>
+     <input name="fileUploader"  class="file-input" id="output" type="file" accept="image/*" class="file-upload" (change)="getimage($event)">
+
+ </label>
+  </div>
+
+<!-- hvgvf -->
+
+  <div class="centered">
+    <div class="check-camera">
+      <label  class="custom-file-upload">
+        <span ><i class="bi bi-camera-fill"></i></span><br>
+        <button class="button is-link right"(click)="checkPermissions()">Capture Image</button>
+        <p *ngIf="stream">Status here: {{status}}</p>
+        <p *ngIf="!stream && status">Status here: {{status}}</p>
+        </label>
+
+  </div>
+  </div>
+</div>
+
+<div class="video-container" *ngIf="stream">
+  <!-- web cam image will be shown here -->
+  <app-face-detect  ></app-face-detect>
+
+</div>
+
+<div>
+ <image-cropper
+[imageChangedEvent]="imgChangeEvt"
+[maintainAspectRatio]="true"
+[aspectRatio]="4 / 4"
+format="png"
+(imageCropped)="cropImg($event)"
+(imageLoaded)="imgLoad()"
+(cropperReady)="initCropper()"
+(loadImageFailed)="imgFailed()">
+</image-cropper>
+</div>
+ <div [hidden]="true"  class="image-container display">
+         <img   id="img1" [src]="cropImgPreview"   alt="Please Upload Your Image Or Open Webcam To Capture an Image">
+ <img  id="img2" src="" alt="Please Choose a Filter From a Below Filters">
+ </div>
+
+<div [hidden]="true" class="image-container display">
+ <div style="width: 50%;">
+     <img  id="img5" [src]="humanimg" alt="Please Upload Your Image Or Open Webcam To Capture an Image">
+ </div>
+ <div style="width: 50%;">
+     <img  id="img4" src="" alt="Please Choose a Filter From a Below Filters">
+ </div>
+
+</div>
+
+<div  class="canvas-container" id="canvas-container">
+
+</div>
+<div id="download" class="download">
+ <!-- <ng-template #content let-modal>
+     <div class="modal-header">
+       <h4 class="modal-title" id="modal-basic-title">Download Your Image</h4> -->
+       <!-- <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button> -->
+     <!-- </div> -->
+     <!-- <div class="modal-body"> -->
+         <div class="dig">
+         <button (click)="download()" class="btn btn-primary"><i class="bi bi-download"></i> Download</button>
+         <button  (click)="openPopup()" class="btn btn-light"><i class="bi bi-envelope-fill"></i> Send via E-mail</button>
+         </div>
+         <!-- <div>
+             <form (ngSubmit)="sendmail()">
+                 <input id="email" type="email" required name="reciever-mail">
+                 <button class="btn" type="submit">submit</button>
+             </form>
+         </div> -->
+
+
+     <!-- </div> -->
+     <!-- <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
+     </div>
+   </ng-template> -->
+
+   <!-- <button class="btn" [hidden]="flag2" (click)="open(content)">Download</button> -->
+
+</div>
+
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Please Enter Your Email Here</h4>
+      </div>
+      <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="sendmail(f)">
+          <label class="form-group"for="exampleInputEmail1">Email address</label>
+          <br>
+          <input ngModel name="mail" #email="ngModel" class="form-group mb-2"
+           type="email" class="form-control" id="exampleInputEmail1" required
+           aria-describedby="emailHelp" placeholder="Enter your Email Address">
+          <br>
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"
+                (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filters-container">
+ <div class="filter" *ngFor="let filter of filters"   >
+    <app-filter
+      (click)="clickFilter(filter)"
+      [filterDetails]="filter">
+    </app-filter>
+  </div>
+  <!-- <div class="filter">
+    <app-filter
+      (FilterClicked)="clickFilter(x)"
+      [filterDetails]="x">
+    </app-filter>
+  </div>
+  <div class="filter">
+    <app-filter
+      (FilterClicked)="clickFilter(y)"
+      [filterDetails]="y">
+    </app-filter>
+  </div>
+  <div class="filter">
+    <app-filter
+      (FilterClicked)="clickFilter(z)"
+      [filterDetails]="z">
+    </app-filter>
+  </div> -->
+</div>
+

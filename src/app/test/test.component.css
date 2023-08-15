@@ -1,0 +1,278 @@
+
+.filters-container{
+
+  width: 1000px;
+  margin: 20px auto;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100px 300px;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.filters{
+  display: block;
+  /* width: 200px; */
+  position: relative;
+}
+#menu{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  z-index: 2;
+  background-color:rgba(241, 243, 244, 1);
+  border: none;
+  color:black;
+  border-radius: 50%;
+
+}
+.super{
+  padding: 1rem 2rem;
+  display: flex;
+  margin: auto auto 25px;
+  position: relative;
+  flex-direction: row;
+justify-content: center;
+}
+.custom-file-upload {
+  /* border: 3px solid var(--color-primary); */
+  padding: 160px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary-light);
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.custom-file-upload i{
+  font-size: 100px;
+  display: block;
+  color: var(--color-primary-dark);
+}
+.custom-file-upload h2{
+  color: var(--color-primary-dark);
+}
+input[type="file"] {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.imgtoadd{
+  width: 150%;
+  height: 80%;
+  min-height: 180px;
+  min-width: 180px;
+}
+.AddContainer{
+  background:#fff;
+  background-size: cover;
+  margin-top: 20px;
+  width: 500px;
+  height: 500px;
+display: flex;
+
+  position: relative;
+
+}
+.form-group{
+  margin-left: 500px;
+  display: inline-block;
+  position: relative;
+}
+.text{
+  color:rgba(0, 60, 255, 0.719);
+  font-family: Dosis,sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-style:normal;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+.radio-group{
+
+  margin-left: 100px;
+  margin-bottom: 20px;
+ }
+ .split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  /* background-color: rgba(17, 17, 17, 0.363); */
+}
+.splitt{
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+.right {
+  right: 0;
+
+}
+.imgtoadd{
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  min-width: 100px;
+}
+.text{
+  color:rgba(0, 60, 255, 0.719);
+  font-family: Dosis,sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-style:normal;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+.custom-file-upload {
+  /* border: 3px solid var(--color-primary); */
+  padding: 160px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary-light);
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.custom-file-upload i{
+  font-size: 100px;
+  display: block;
+  color: var(--color-primary-dark);
+}
+.custom-file-upload h2{
+  color: var(--color-primary-dark);
+}
+input[type="file"] {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+/* .radio{
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  vertical-align:middle;
+  color: #0C479D;
+  margin-left: 10px;
+} */
+.radio-group{
+
+ margin-left: 100px;
+ margin-bottom: 20px;
+}
+
+.field{
+  margin-left: 100px;
+  width: 100;
+  height: 50;
+}
+.in{
+
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: none;
+  border: 0;
+  box-shadow: inset 0 0 0 1px;
+  box-shadow: inset 0 0 0 1.5px;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  transition: box-shadow 150ms cubic-bezier(.95,.15,.5,1.25);
+  pointer-events: none;
+
+
+
+}
+span{
+  font-weight: 100;
+  font-size: medium;
+vertical-align: middle;
+display: inline-block;
+line-height: 20px;
+padding: 0 8px;
+}
+
+.lab{
+padding: 6px;
+border-radius: 50px;
+  display: inline-flex;
+  cursor: pointer;
+  transition: background .2s ease;
+  margin: 8px 0;
+  -webkit-tap-highlight-color: transparent;
+margin-right: 20px;
+font-weight: 200;
+color: white;
+background-color: green;
+}
+
+
+
+
+
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.form-group{
+  margin-left: 500px;
+  display: inline-block;
+  position: relative;
+}
+.btn {
+  width: 500;
+}
+.overlay{
+  width: 96%;
+  height: 100%;
+  background-color:var( --grey-dark-1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0 0.4rem;
+}
+
+

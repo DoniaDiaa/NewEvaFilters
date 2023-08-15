@@ -1,0 +1,196 @@
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+}
+
+
+
+.filters-container{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.filter{
+    width: 25%;
+}
+.filters-container .filter  app-filter{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.filters-container div img{
+    width: 100%;
+}
+canvas img{
+    image-rendering: optimizeQuality;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+button{
+    margin-top: 50px;
+}
+
+.custom-file-upload {
+  /* border: 3px solid var(--color-primary); */
+  padding: 160px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary-light);
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.custom-file-upload i{
+  font-size: 100px;
+  display: block;
+  color: var(--color-primary-dark);
+}
+.custom-file-upload h2{
+  color: var(--color-primary-dark);
+}
+input[type="file"] {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.left-pane {
+  position: relative;
+  height: 100%;
+  margin-block-start: 10px;
+}
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+
+  margin-top: 130px;
+}
+.input-container{
+  position: relative;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+
+
+    color: var(--color-primary-light);
+    width: 50%;
+    height: 30rem;
+
+}
+.custom-file-upload i{
+    font-size: 100px;
+    display: block;
+    color: var(--color-primary-dark);
+}
+.custom-file-upload h2{
+    color: var(--color-primary-dark);
+}
+.split{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 5rem;
+}
+.or{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 2rem;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+}
+
+.line{
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 5px;
+    color: var(--color-primary);
+    background-color: var(--color-primary);
+    margin-top: -2.5rem;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 50em) {
+    .line {
+     width: 100%;
+    }
+
+  }
+  .ss{
+    display: none;
+  }
+
+  .video-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .check-camera{
+    text-align: center;
+
+  }
+.display{
+    opacity: 0;
+  }
+  .canvas-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #myCanvas{
+    max-width: 100%;
+    height: auto;
+  }
+  .download{
+    margin-top: 50px;
+  }
+  .modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
