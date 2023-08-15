@@ -7,7 +7,11 @@ import * as faceapi from 'face-api.js';
 export class FaceApiService {
   public globalFace: any;
 
- modelsPath = 'assets/models/';
+ modelsPath = 'graduation-project/assets/models/';
+
+
+  faceapi = require("face-api.js");
+
 
   private modelsForLoad = [
     faceapi.nets.ssdMobilenetv1.loadFromUri(this.modelsPath),
