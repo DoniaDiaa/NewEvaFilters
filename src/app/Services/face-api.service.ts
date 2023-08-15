@@ -7,7 +7,7 @@ import * as faceapi from 'face-api.js';
 export class FaceApiService {
   public globalFace: any;
 
- modelsPath = 'graduation-project/assets/models/';
+ modelsPath = '/assets/models/';
 
 
   faceapi = require("face-api.js");
