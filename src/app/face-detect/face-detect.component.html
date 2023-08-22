@@ -1,7 +1,7 @@
 <div class="wrapper">
 <div class="block-main">
     <div class="cam">
-      <!-- <app-video-player 
+      <!-- <app-video-player
         [width]="dimensionVideo.width"
         [height]="dimensionVideo.height"
         [stream]="currentStream">
@@ -14,16 +14,16 @@
     </div>
       <div class="zone-body">
         <div class="block">
-          <div><b>Expressions</b></div>
+          <!-- <div><b>Expressions</b></div>
           <div *ngFor="let expression of listExpressions">
             <span>{{expression.name}}</span><span class="value-number">{{ expression.value | number }}</span>
-            
-          </div>
+
+          </div> -->
           <button class="btn" (click)="triggerstream()" *ngIf="!currentStream">Take another image</button>
         </div>
-        
+
       </div>
-      
+
   </div>
 </div>
 

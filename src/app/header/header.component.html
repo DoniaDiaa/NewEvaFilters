@@ -1,6 +1,6 @@
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
-    <h1 class="logo me-auto"><img src="assets/instagram.png"class="logoimg"><a class="navbar-brand" routerLink="/" >Eva-Filters</a></h1>
+    <h1 class="logo me-auto"><img src="assets/logo.png"class="logoimg" routerLink="/"></h1>
     <!-- <nav id="navbar" class="navbar navbar-expand-lg">
 
            <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
@@ -10,12 +10,13 @@
     </nav> -->
 
         <div class="buttons">
-          <a *ngIf="!userID"   routerLink="login" class="button is-link">LOGIN</a>
-    <!-- <a *ngIf="!userID" routerLink="login" class="login-btn scrollto">Login </a> -->
-
-    <a *ngIf="userID" (click)="LogOut()"  class="button is-link">LOGOUT </a>
-    <!-- <a class="button is-link" (click)="AddNewAdmin()"> Add New Admin</a> -->
-  </div>
+          <button type="submit" class="btn btn-primary" routerLink="admin" *ngIf="!userID">
+            LOGIN
+          </button>
+          <button type="submit" class="btn btn-danger" (click)="LogOut()" *ngIf="userID">
+            LOGOUT
+          </button>
+        </div>
       </div>
 
 </header>

@@ -29,6 +29,7 @@
     "@tensorflow/tfjs-core": "1.2.9",
     "@tensorflow/tfjs-node": "1.2.9",
     "@vladmandic/face-api": "^1.7.2",
+    "angular-font-awesome": "^3.1.2",
     "assert": "^2.0.0",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",

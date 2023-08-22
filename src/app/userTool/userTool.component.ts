@@ -255,6 +255,7 @@ console.log('initCropper');
   }
   sendmail(form:NgForm){
   let canvas:any = document.getElementById("myCanvas");
+  console.log(canvas)
   let email = form.value.mail;
   let imgFile: any;
   canvas.toBlob((imgBlob: any) => {
