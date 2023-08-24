@@ -14,6 +14,8 @@ export class FaceDetectComponent implements OnInit {
   }
   public currentStream: any;
   public dimensionVideo: any;
+  public countdown: number = 0;
+  private countdownInterval: any;
   listEvents: Array<any> = [];
   overCanvas: any;
   listExpressions: any = [];
@@ -47,10 +49,10 @@ export class FaceDetectComponent implements OnInit {
           });
           // this.createCanvasPreview(videoElement);
           this.drawFace(resizedDetections, displaySize);
-          
+
         }
-        
-          
+
+
             for (var face of resizedDetections) {
               console.log(resizedDetections)
               if(face.expressions.happy > 0.9){
@@ -59,7 +61,7 @@ export class FaceDetectComponent implements OnInit {
                 canvas.width = videoElement.nativeElement.videoWidth;
                 canvas.height = videoElement.nativeElement.videoHeight;
                 let ctx:any = canvas.getContext("2d");
-                
+
                ctx.drawImage(videoElement.nativeElement, 0, 0);
                 var img=new Image();
                 img.src = canvas.toDataURL();
@@ -72,15 +74,15 @@ export class FaceDetectComponent implements OnInit {
                 console.log(this.currentStream);
               }
          }
-            
-                
+
+
                         }
-      
-        
+
+
       );
 
     this.listEvents = [observer1$];
-    
+
   };
 
   drawFace = (resizedDetections: any, displaySize: { width: any; height: any; }) => {
@@ -90,14 +92,34 @@ export class FaceDetectComponent implements OnInit {
 
     }
   };
-  triggerstream(){
-    
-    navigator.mediaDevices
-        .getUserMedia({
-          audio: false,
-          video: true,
-        })
-        .then((stream) => this.currentStream = stream)
+  triggerstream() {
+    this.countdown = 3;
+    this.countdownInterval = setInterval(() => {
+      this.countdown--;
+      if (this.countdown === 0) {
+        clearInterval(this.countdownInterval);
+        navigator.mediaDevices.getUserMedia({ audio: false, video: true }).then((stream) => {
+          this.currentStream = stream;
+          this.startCaptureCountdown();
+        });
+      }
+    }, 1000);
+  }
+
+  startCaptureCountdown() {
+    let countdown = 3;
+    const countdownInterval = setInterval(() => {
+      countdown--;
+      if (countdown === 0) {
+        clearInterval(countdownInterval);
+        // Capture the image here
+        this.listenerEvents();
+      }
+    }, 1000);
+  }
+
+  captureImage(){
+
   }
 
   checkMediaSource = () => {
